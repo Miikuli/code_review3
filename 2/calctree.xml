@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doxygen version="1.9.1">
+  <compounddef kind="file" id="calctree_8h" language="C++">
+    <compoundname>calctree.h</compoundname>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">sstream</includes>
+    <includedby refid="calctree_8cpp" local="yes">calctree.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <briefdescription>
+    <para>Заголовочный файл для работы с деревьями арифметических выражений</para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+    </programlisting>
+    <location file="calctree.h"/>
+  </compounddef>
+
+  <compounddef kind="enum" id="calctree_8h_1a1" language="C++">
+    <compoundname>Operation</compoundname>
+    <enumvalue id="calctree_8h_1a1a1" prot="public">
+      <name>ADD</name>
+      <initializer>= -1</initializer>
+      <briefdescription>
+<para>Код операции сложения (+) </para>
+      </briefdescription>
+    </enumvalue>
+    <enumvalue id="calctree_8h_1a1a2" prot="public">
+      <name>SUB</name>
+      <initializer>= -2</initializer>
+      <briefdescription>
+<para>Код операции вычитания (-) </para>
+      </briefdescription>
+    </enumvalue>
+    <enumvalue id="calctree_8h_1a1a3" prot="public">
+      <name>MUL</name>
+      <initializer>= -3</initializer>
+      <briefdescription>
+<para>Код операции умножения (*) </para>
+      </briefdescription>
+    </enumvalue>
+    <enumvalue id="calctree_8h_1a1a4" prot="public">
+      <name>DIV</name>
+      <initializer>= -4</initializer>
+      <briefdescription>
+<para>Код операции деления (/) </para>
+      </briefdescription>
+    </enumvalue>
+    <enumvalue id="calctree_8h_1a1a5" prot="public">
+      <name>MOD</name>
+      <initializer>= -5</initializer>
+      <briefdescription>
+<para>Код операции остатка от деления (%) </para>
+      </briefdescription>
+    </enumvalue>
+    <enumvalue id="calctree_8h_1a1a6" prot="public">
+      <name>POW</name>
+      <initializer>= -6</initializer>
+      <briefdescription>
+<para>Код операции возведения в степень (^) </para>
+      </briefdescription>
+    </enumvalue>
+    <briefdescription>
+<para>Коды арифметических операций. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Используются для представления операций в узлах дерева: <itemizedlist>
+<listitem><para>Отрицательные значения: операции </para>
+</listitem>
+<listitem><para>Положительные (0-9): операнды </para>
+</listitem>
+</itemizedlist>
+</para>
+    </detaileddescription>
+    <location file="calctree.h" line="12"/>
+  </compounddef>
+
+  <compounddef kind="struct" id="calctree_8h_1a2" language="C++">
+    <compoundname>Node</compoundname>
+    <briefdescription>
+<para>Узел бинарного дерева выражения. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Хранит значение узла (операнд или код операции) и умные указатели на дочерние узлы. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="calctree.h" line="21"/>
+  </compounddef>
+
+  <compounddef kind="class" id="calctree_8h_1a3" language="C++">
+    <compoundname>CalcTree</compoundname>
+    <briefdescription>
+<para>Основной класс для работы с деревьями выражений. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Реализует построение дерева из префиксного выражения, оптимизацию поддеревьев и предоставляет доступ к корню. </para>
+    </detaileddescription>
+    <location file="calctree.h" line="36"/>
+  </compounddef>
+
+  <compounddef kind="file" id="main_8cpp" language="C++">
+    <compoundname>main.cpp</compoundname>
+    <includes refid="calctree_8h" local="yes">calctree.h</includes>
+    <includes local="no">iostream</includes>
+    <briefdescription>
+    <para>Файл с примером использования дерева выражений</para>
+    </briefdescription>
+    <detaileddescription>
+    <para>Содержит функцию для печати дерева и пример работы с классом CalcTree</para>
+    </detaileddescription>
+    <programlisting>
+    </programlisting>
+    <location file="main.cpp"/>
+  </compounddef>
+
+  <compounddef kind="file" id="calctree_8cpp" language="C++">
+    <compoundname>calctree.cpp</compoundname>
+    <includes refid="calctree_8h" local="yes">calctree.h</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">cctype</includes>
+    <briefdescription>
+    <para>Реализация методов класса CalcTree</para>
+    </briefdescription>
+    <detaileddescription>
+    <para>Содержит логику построения дерева выражений и его оптимизации</para>
+    </detaileddescription>
+    <programlisting>
+    </programlisting>
+    <location file="calctree.cpp"/>
+  </compounddef>
+</doxygen>
