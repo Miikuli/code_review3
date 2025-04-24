@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doxygen version="1.9.1">
+  <compounddef kind="file" id="generator_8h" language="C++">
+    <compoundname>generator.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="generator_8cpp" local="yes">generator.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <briefdescription>
+    <para>Заголовочный файл для генератора паролей</para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+    </programlisting>
+    <location file="generator.h"/>
+  </compounddef>
+
+  <compounddef kind="func" id="generator_8h_1a1a8b4a3a3b9a2a4a5a6a7a8a9a0a1a" language="C++">
+    <compoundname>getRandomChar</compoundname>
+    <param>
+      <type>const std::string &amp;</type>
+      <declname>charset</declname>
+    </param>
+    <briefdescription>
+<para>Генерирует случайный символ из заданного набора. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>charset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Набор допустимых символов </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Случайный символ из набора </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="generator.h" line="10"/>
+  </compounddef>
+
+  <compounddef kind="func" id="generator_8h_1a2a8b4a3a3b9a2a4a5a6a7a8a9a0a2a" language="C++">
+    <compoundname>shuffleString</compoundname>
+    <param>
+      <type>std::string &amp;</type>
+      <declname>str</declname>
+    </param>
+    <briefdescription>
+<para>Перемешивает символы в строке для повышения энтропии. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ссылка на строку для перемешивания </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="generator.h" line="17"/>
+  </compounddef>
+
+  <compounddef kind="func" id="generator_8h_1a3a8b4a3a3b9a2a4a5a6a7a8a9a0a3a" language="C++">
+    <compoundname>generatePassword</compoundname>
+    <param>
+      <type>int</type>
+      <declname>length</declname>
+    </param>
+    <param>
+      <type>const std::vector&lt; std::string &gt; &amp;</type>
+      <declname>charsets</declname>
+    </param>
+    <briefdescription>
+<para>Генерирует пароль заданной сложности. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Длина пароля </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>charsets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Вектор наборов символов для гарантированного включения </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Сгенерированный пароль </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="generator.h" line="25"/>
+  </compounddef>
+
+  <compounddef kind="file" id="main_8cpp" language="C++">
+    <compoundname>main.cpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">ctime</includes>
+    <includes local="no">cstdlib</includes>
+    <includes refid="generator_8h" local="yes">generator.h</includes>
+    <briefdescription>
+    <para>Основной файл программы для генерации паролей</para>
+    </briefdescription>
+    <detaileddescription>
+    <para>Предоставляет пользовательский интерфейс для выбора сложности пароля и вывода результата</para>
+    </detaileddescription>
+    <programlisting>
+    </programlisting>
+    <location file="main.cpp"/>
+  </compounddef>
+
+  <compounddef kind="file" id="generator_8cpp" language="C++">
+    <compoundname>generator.cpp</compoundname>
+    <includes refid="generator_8h" local="yes">generator.h</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">algorithm</includes>
+    <briefdescription>
+    <para>Реализация функций генератора паролей</para>
+    </briefdescription>
+    <detaileddescription>
+    <para>Содержит реализацию функций для генерации случайных символов, перемешивания строк и создания паролей</para>
+    </detaileddescription>
+    <programlisting>
+    </programlisting>
+    <location file="generator.cpp"/>
+  </compounddef>
+</doxygen>
