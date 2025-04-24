@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doxygen version="1.9.1">
+  <compounddef kind="file" id="graph__bfs_8h" language="C++">
+    <compoundname>graph_bfs.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="no">string</includes>
+    <includedby refid="graph__bfs_8cpp" local="yes">graph_bfs.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <briefdescription>
+    <para>Заголовочный файл для поиска в ширину (BFS) в графе</para>
+    </briefdescription>
+    <detaileddescription>
+    <para>Содержит объявления функций для чтения графа и выполнения BFS-обхода</para>
+    </detaileddescription>
+    <programlisting>
+    </programlisting>
+    <location file="graph_bfs.h"/>
+  </compounddef>
+
+  <compounddef kind="func" id="graph__bfs_8h_1a1" language="C++">
+    <compoundname>ReadGraph</compoundname>
+    <param>
+      <type>const std::string &amp;</type>
+      <declname>filename</declname>
+    </param>
+    <param>
+      <type>int &amp;</type>
+      <declname>n</declname>
+    </param>
+    <param>
+      <type>bool &amp;</type>
+      <declname>errorFlag</declname>
+    </param>
+    <briefdescription>
+<para>Читает матрицу смежности из файла. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Имя файла с матрицей смежности </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Количество вершин графа (выходной параметр) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errorFlag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Флаг ошибки чтения (true при ошибке) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Матрица смежности размером n×n </para>
+</simplesect>
+<simplesect kind="note"><para>Формат файла: первая строка - n, затем n строк матрицы </para>
+</simplesect>
+<simplesect kind="warning"><para>При ошибке возвращает пустую матрицу и устанавливает errorFlag=true </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="graph_bfs.h" line="14"/>
+  </compounddef>
+
+  <compounddef kind="func" id="graph__bfs_8h_1a2" language="C++">
+    <compoundname>Bfs</compoundname>
+    <param>
+      <type>const std::vector&lt; std::vector&lt; int &gt;&gt; &amp;</type>
+      <declname>graph</declname>
+    </param>
+    <param>
+      <type>int</type>
+      <declname>start</declname>
+    </param>
+    <briefdescription>
+<para>Выполняет BFS-обход графа с сортировкой соседей. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Матрица смежности графа </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Начальная вершина обхода (0-based) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Вектор с номерами вершин в порядке обхода </para>
+</simplesect>
+<simplesect kind="note"><para>Соседи сортируются по возрастанию перед добавлением в очередь </para>
+</simplesect>
+<simplesect kind="warning"><para>Не проверяет корректность входных данных </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="graph_bfs.h" line="25"/>
+  </compounddef>
+
+  <compounddef kind="file" id="graph__bfs_8cpp" language="C++">
+    <compoundname>graph_bfs.cpp</compoundname>
+    <includes refid="graph__bfs_8h" local="yes">graph_bfs.h</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">queue</includes>
+    <includes local="no">algorithm</includes>
+    <briefdescription>
+    <para>Реализация функций для работы с графом </para>
+    </briefdescription>
+    <detaileddescription>
+    <para>Содержит реализацию чтения графа и алгоритма BFS</para>
+    </detaileddescription>
+    <programlisting>
+    </programlisting>
+    <location file="graph_bfs.cpp"/>
+  </compounddef>
+
+  <compounddef kind="file" id="main_8cpp" language="C++">
+    <compoundname>main.cpp</compoundname>
+    <includes refid="graph__bfs_8h" local="yes">graph_bfs.h</includes>
+    <includes local="no">iostream</includes>
+    <briefdescription>
+    <para>Пример использования BFS-обхода </para>
+    </briefdescription>
+    <detaileddescription>
+    <para>Считывает граф из файла и выводит результат BFS-обхода</para>
+    </detaileddescription>
+    <programlisting>
+    </programlisting>
+    <location file="main.cpp"/>
+  </compounddef>
+</doxygen>
