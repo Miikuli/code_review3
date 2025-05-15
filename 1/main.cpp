@@ -36,11 +36,9 @@ int main() {
 
     switch (choice) {
     case 1:
-        length = 8;
         charsets.push_back("abcdefghijklmnopqrstuvwxyz");
         break;
     case 2:
-        length = 12;
         charsets = {
             "abcdefghijklmnopqrstuvwxyz",
             "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -48,7 +46,6 @@ int main() {
         };
         break;
     case 3:
-        length = 16;
         charsets = {
             "abcdefghijklmnopqrstuvwxyz",
             "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
