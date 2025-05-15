@@ -22,10 +22,16 @@ int main() {
         << "3. Сложный (16 символов, буквы, цифры, спецсимволы)\n"
         << "Ваш выбор: ";
 
-    int choice;
+    int choice = 0;
     std::cin >> choice;
 
+    std::cout << "Выберите длину пароля (от 4 до 100):\n";
+    
     int length = 0;
+    std::cin >> length;
+    if (length < 4 || length > 100) {
+        std::cerr << "Некорректная длина";
+    }
     std::vector<std::string> charsets;
 
     switch (choice) {
